@@ -1,0 +1,13 @@
+<div class="root">
+    <div class=" row">
+        <div class="Box col-sm-3" *ngFor="let item of BoardState;let i = index" #myitems>
+    
+            <label class="Number" [ngClass]="{'Success' : IsDone && item > 0}" [ngClass]="{'Blank' : item == 0}" (click)="MoveElement(item)">{{ item }}</label>
+          </div>
+         
+        
+    </div>
+</div>
+<div *ngIf="IsDone" >
+    <h3>Completed !</h3>
+</div>
